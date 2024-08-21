@@ -7,7 +7,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
     clean: true,
-    publicPath: '/', 
+    publicPath: '/',
   },
   resolve: {
     extensions: ['.js', '.jsx'],
@@ -49,5 +49,5 @@ module.exports = {
       template: './public/index.html',
     }),
   ],
-  mode: 'production',  
+  mode: 'production',
 };
