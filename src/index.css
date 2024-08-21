@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: 'Regular';
+    src: url('./assets/fonts/Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PublicSans';
+    src: url('./assets/fonts/PublicSans.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: 'Regular'; 
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+span {
+    font-family: 'PublicSans';
+}
