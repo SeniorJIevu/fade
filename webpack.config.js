@@ -7,6 +7,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
     clean: true,
+    publicPath: '/', 
   },
   resolve: {
     extensions: ['.js', '.jsx'],
@@ -48,14 +49,5 @@ module.exports = {
       template: './public/index.html',
     }),
   ],
-  devServer: {
-    static: {
-      directory: path.join(__dirname, 'public'),
-    },
-    compress: true,
-    port: 9000,
-    open: true, // automatically open the browser
-    hot: true,  // enable Hot Module Replacement
-  },
-  mode: 'development',
+  mode: 'production',  
 };
