@@ -17,8 +17,8 @@ import logo from '../assets/logo.png';
                     const totalHours = Math.floor(distance / (1000 * 60 * 60));
                     const totalMinutes = Math.floor(distance / (1000 * 60));
                     const days = Math.floor(totalHours / 24);
-                    const hours = totalHours;
-                    const minutes = totalMinutes;
+                    const hours = totalHours % 24;
+                    const minutes = totalMinutes % 60;
                     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
                     setTimeLeft({ days, hours, minutes, seconds });
@@ -41,7 +41,7 @@ import logo from '../assets/logo.png';
             <div className="relative z-10 text-center">
                 <img src={logo} alt="Fade Wallet Logo" className="mx-auto mb-16 w-[170px] h-[155px] md:w-[245px] md:h-[221px]" />
                 <div className="grid grid-cols-4 gap-2 px-2 text-[23px] font-black md:text-5xl mb-10 md:mb-16 items-center justify-evenly">
-                    <div className="flex flex-col items-center w-[95px] md:w-[260px] border-r border-l border-x-[#37334F]">
+                    <div className="flex flex-col items-center w-[95px] md:w-[260px] border-r  border-x-[#37334F]">
                         <span>{timeLeft.days}</span>
                         <div className="text-xs md:text-sm font-normal mt-2 opacity-[40%]">days</div>
                     </div>
@@ -53,7 +53,7 @@ import logo from '../assets/logo.png';
                         <span>{timeLeft.minutes}</span>
                         <div className="text-xs md:text-sm font-normal mt-2 opacity-[40%]">minutes</div>
                     </div>
-                    <div className="flex flex-col items-center w-[80px] md:w-[260px] border-l border-r border-x-[#37334F]">
+                    <div className="flex flex-col items-center w-[80px] md:w-[260px]  border-l border-x-[#37334F]">
                         <span>{timeLeft.seconds}</span>
                         <div className="text-xs md:text-sm font-normal mt-2 opacity-[40%]">seconds</div>
                     </div>
