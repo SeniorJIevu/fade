@@ -3,7 +3,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
-
 module.exports = {
   entry: './src/index.js',
   output: {
@@ -36,7 +35,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jpe?g|gif|svg)$/,
+        test: /\.(png|jpe?g|gif|svg|ico)$/,
         type: 'asset/resource',
         generator: {
           filename: 'images/[name].[hash][ext]',
@@ -54,6 +53,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',
+      favicon: './public/coin.png'
     }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
@@ -74,6 +74,7 @@ module.exports = {
   },
   mode: 'production',
   performance : {
-    hints : false
-}  
+    hints : false,
+  },
+
 };
