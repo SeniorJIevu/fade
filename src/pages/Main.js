@@ -10,9 +10,9 @@ import logo from '../assets/logo.png';
         useEffect(() => {
             const countdown = () => {
                 const now = new Date().getTime();
-                const targetDate = FIXED_START_DATE.getTime() + 90 * 24 * 60 * 60 * 1000;;
+                const targetDate = FIXED_START_DATE.getTime() + 90 * 24 * 60 * 60 * 1000;
                 const distance = targetDate - now;
-    
+        
                 if (distance > 0) {
                     const totalHours = Math.floor(distance / (1000 * 60 * 60));
                     const totalMinutes = Math.floor(distance / (1000 * 60));
@@ -20,17 +20,22 @@ import logo from '../assets/logo.png';
                     const hours = totalHours % 24;
                     const minutes = totalMinutes % 60;
                     const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-                    setTimeLeft({ days, hours, minutes, seconds });
+        
+                    setTimeLeft({
+                        days: String(days).padStart(2, '0'),
+                        hours: String(hours).padStart(2, '0'),
+                        minutes: String(minutes).padStart(2, '0'),
+                        seconds: String(seconds).padStart(2, '0')
+                    });
                 } else {
-                    // Время истекло, установите нулевое время
-                    setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+                    setTimeLeft({ days: '00', hours: '00', minutes: '00', seconds: '00' });
                 }
             };
-
+        
             const interval = setInterval(countdown, 1000);
             return () => clearInterval(interval);
         }, []);
+        
 
 
     return (
