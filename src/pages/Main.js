@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import logo from '../assets/logo.png';
+import MainButtons from '../components/MainButtons';
 
 
     const FIXED_START_DATE = new Date('2024-08-20T00:00:00Z'); // Установите нужное фиксированное время
@@ -63,9 +64,12 @@ import logo from '../assets/logo.png';
                         <div className="text-xs md:text-sm font-normal mt-2 opacity-[40%]">seconds</div>
                     </div>
                 </div>
+                    <MainButtons/>
+                <div>
                 <p className="text-[16px] md:text-[22px] leading-5 md:leading-6 opacity-[80%] px-[4.5em]">
                     We are working on something amazing. We will be back soon.
                 </p>
+                </div>
             </div>
         </div>
     );
