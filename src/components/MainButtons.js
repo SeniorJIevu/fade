@@ -7,7 +7,7 @@ import icon_4 from '../assets/buttons/icon_4.png';
 const buttons = [
   { id: 1, text: 'Telegram', icon: icon_4, href: 'https://t.me/fadewallet' },
   { id: 2, text: 'Telegram Chat', icon: icon_3, href: 'https://t.me/fadewalletchat' },
-  { id: 3, text: 'Buy a token on Dedust', icon: icon_2, href: 'https://dedust.io/swap/TON/EQCh9DUkmEdz7BuM_kv_iDqXeXWHrMUZHcZfXnr8yBAfPHcn' },
+  { id: 3, text: 'Buy token on Dedust', icon: icon_2, href: 'https://dedust.io/swap/TON/EQCh9DUkmEdz7BuM_kv_iDqXeXWHrMUZHcZfXnr8yBAfPHcn' },
   { id: 4, text: '', icon: icon_1, href: 'https://x.com/FadeWallet' }
 ];
 
