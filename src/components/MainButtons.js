@@ -17,7 +17,7 @@ const MainButtons = () => {
       {buttons.map((button, index) => (
         <div key={button.id}>
           <a href={button.href} className="flex items-center justify-center px-[45px] py-[25px] lg:px-[2vw] lg:py-[2.5vh] w-[70vw] lg:w-[15vw] h-[5vh] border-[1px] border-x-zinc-50 text-lg rounded-[5px]">
-            <span className='text-[1.8vh]'>{button.text}</span> 
+            <span className='text-[1.6vh]'>{button.text}</span> 
             <img src={button.icon} alt={button.text} className="ml-[6px] w-[15px] h-[15px]" />
           </a>
         </div>
